@@ -16,7 +16,13 @@ const armor = {
   name: 'Shiny Armor',
   durability: 90,
   enhancement: 13,
-}
+};
+
+const spear = {
+  name: 'Golden Spear',
+  durability: 100,
+  enhancement: 0,
+};
 
 describe('enhancer', () => {
   it('should run tests for the enhancer', () => {
@@ -55,5 +61,6 @@ describe('enhancer', () => {
     expect(get(sword)).toHaveProperty('name', '[+15] Holy Sword');
     expect(get(shield)).toHaveProperty('name', '[+20] Basic Shield');
     expect(get(armor)).toHaveProperty('name', '[+13] Shiny Armor');
+    expect(get(spear)).toHaveProperty('name', 'Golden Spear');
   });
 });
